@@ -2,7 +2,7 @@ import React, {forwardRef, useImperativeHandle, useState} from 'react'
 import PropTypes from 'prop-types'
 import i18n from '../i18n/index'
 
-const Togglable = forwardRef(({children, buttonLabel = 'Muestrame esto, desde default values'}, ref) => {
+const Togglable = forwardRef(({children, buttonLabel = 'show'}, ref) => {
   const [visible, setVisible] = useState(false)
 
   const hideWhenVisible = { display: visible ? 'none' : '' }
