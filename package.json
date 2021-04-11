@@ -15,10 +15,18 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "json-server -p3001 --watch db.json"
+    "server": "json-server -p3001 --watch db.json",
+    "cypress:open": "cypress open",
+    "test:e2e": "cypress run"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "env": {
+      "cypress/globals": true
+    },
+    "extends": "react-app",
+    "plugins": [
+      "cypress"
+    ]
   },
   "browserslist": {
     "production": [
@@ -35,6 +43,8 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.5",
+    "cypress": "^6.8.0",
+    "eslint-plugin-cypress": "^2.11.2",
     "json-server": "^0.15.1"
   }
 }
